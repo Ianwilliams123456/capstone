@@ -1,0 +1,22 @@
+.navigator {
+  display: flex;
+  border: solid #ffda22;
+  border-radius: 25px;
+  background-color: #735cdd;
+  justify-content: right;
+}
+
+.navigator ul > li {
+  list-style: none;
+  display:inline;
+  float:right;
+  padding-right: 50px;
+  font-weight: bolder;
+
+}
+
+.navigator:after {
+  content: "";
+  display: table;
+  clear: both;
+}
