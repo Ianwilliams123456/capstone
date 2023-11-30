@@ -1,0 +1,13 @@
+- fill in descriptive text on boxes on index.html
+  - I prefer clickable images for the army selector and scheduler boxes
+- get navbar items aligned correctly
+  - home needs to be in the same place on all pages except index.html
+  - get the stupid links moved to the right and formatted the way I want
+  - get nav text aligned in the middle
+- decide on how to hav each page formatted
+  - this is a rough draft but do it
+- fill in descriptive text on boxes on other pages
+- how do i pull and fill lots of text?
+  - how do i do scrolling?
+  - how do i do animations?
+  - I assume these are js?
