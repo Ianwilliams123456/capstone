@@ -54,6 +54,7 @@ font-family: 'Roboto', sans-serif;
       border-radius: 25px;
       background-image: radial-gradient(lightgray, gray);
     }
+
     #appExplanation{
     width: 80vw;
     height: 30vh;

@@ -64,7 +64,6 @@ font-family: 'Roboto', sans-serif;
   grid-row-start: 1;
   grid-row-end: 1;
   width: 30vw;
-  /* justify-self: flex-end; */
   }
   .armySelector{
   border-radius: 25px;
@@ -73,7 +72,6 @@ font-family: 'Roboto', sans-serif;
   grid-row-start: 2;
   grid-row-end: 2;
   width: 30vw;
-  /* justify-self: flex-end; */
   }
   .scheduler{
   border-radius: 25px;
