@@ -2,7 +2,7 @@ import html from "html-literal";
 export default links => html`
   <nav>
       <div class = "navText">DIGIMEETS</div>
-      <ul class="a">
+    <ul class="a">
       ${links
         .map(
           link =>
