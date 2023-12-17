@@ -6,7 +6,7 @@ export default () => html`
         Need Wall o' Text
       </div>
       <div class="contactSelectorBoxes" id="contactForm">
-        Contact us
+        <h2>Contact us</h2>
         <form
           id="fs-frm"
           name="simple-contact-form"
@@ -46,7 +46,7 @@ export default () => html`
               value="Contact Form Submission"
             />
           </fieldset>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" id="submit" />
         </form>
       </div>
     </div>

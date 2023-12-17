@@ -131,6 +131,7 @@ width: 25vw;
   display:flex;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .contactSelectorBoxes > div {
@@ -138,15 +139,31 @@ width: 25vw;
   border: thick solid black;
   border-radius: 25px;
   background-image: radial-gradient(lightgray, gray);
+  width: 80vw;
+  height: 30vh;
+  margin: 30px;
+  padding: 50px;
+}
+
+
+#fs-frm-inputs {
+  height: 25vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: xx-large;
 }
 
 .gameSelectorBoxes {
   display:grid;
-  grid-template-columns: repeat(2, 2fr);
-  grid-template-rows: repeat(2, 2fr);
-  grid-gap: 50px;
+  grid-template-columns: repeat(2);
+  grid-template-rows: repeat(2);
+  /* grid-gap: 50px;
   padding: 50px;
-  height: 80vh;
+  height: 80vh; */
 }
 
 .gameSelectorBoxes > div {
@@ -159,7 +176,7 @@ width: 25vw;
   align-items: center;
 }
 
-.unused{
+.unused {
   border-radius: 25px;
   grid-column-start: 2;
   grid-column-end: 2;
