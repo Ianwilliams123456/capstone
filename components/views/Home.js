@@ -1,19 +1,18 @@
 import html from "html-literal";
-export default () => html`
+export default state => html`
   <main>
     <div class="homeSelectorBoxes">
       <div class="homeSelectorBoxes" id="appExplanation">
-        App Explanation Words
+      In the city of ${state.weather.city}
       </div>
       <div class="homeSelectorBoxes" id="armySelector">
-        Army Selector clickable image
+      The weather is ${state.weather.description}
       </div>
       <div class="homeSelectorBoxes" id="scheduler">
-        Scheduler clickable image
+      The temperature is ${state.weather.temp}F
       </div>
       <div class="homeSelectorBoxes" id="unused">
-        display available games, maybe profile saver
+      it feels like ${state.weather.feelsLike}F
       </div>
-    </div>
   </main>
 `;

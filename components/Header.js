@@ -1,6 +1,6 @@
 import html from "html-literal";
-export default () => html`
+export default state => html`
   <head>
-    <div class="headSpacer"></div>
+    <h1><div id = headertext>${state.header}<div></h1>
   </head>
 `;

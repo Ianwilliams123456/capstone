@@ -2,7 +2,7 @@ import html from "html-literal";
 export default () => html`
   <main>
     <div class="contactSelectorBoxes">
-      <div class="contactSelectorBoxes" id="appExplanation">
+      <div class="contactSelectorBoxes" id="contactappExplanation">
         Need Wall o' Text
       </div>
       <div class="contactSelectorBoxes" id="contactForm">

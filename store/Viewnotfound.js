@@ -1,4 +1,4 @@
 export default {
-  header: "My dead link Page",
+  header: "",
   view: "Viewnotfound"
 };
