@@ -1,4 +1,6 @@
 export default {
   header: "Choose A Race, Class and Level",
-  view: "Dandd"
+  view: "Dandd",
+  classes: [],
+  race: []
 };

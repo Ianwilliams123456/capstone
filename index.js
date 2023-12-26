@@ -19,16 +19,29 @@ function render(state = store.Home) {
 }
 
 // function afterRender(state) {
-//   // add menu toggle to bars icon in nav bar
-//   document.querySelector(".fa-bars").addEventListener("click", () => {
-//     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
-//   });
+//   //   // add menu toggle to bars icon in nav bar
+//   //   document.querySelector(".fa-bars").addEventListener("click", () => {
+//   //     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+//   //   });
 
-//   if (state.view === "Home") {
-//     // Do this stuff
-//     document.getElementById("callToAction").addEventListener("click", event => {
-//       event.preventDefault();
-
+// if (state.view === "Dandd") {
+//     for (let i = 0; i < store.Dandd.class.results.length; i++) {
+//       classfilter = store.Dandd.class.results[i].name;
+//       console.log(classfilter);
+//     }
+//   }
+// }
+//       console.log(store.Dandd.class);
+//     });
+//   }
+// }
+//     for (var i = 0; i < store.Dandd.class.length; i++) {
+//       var classes = document.createElement("div");
+//       classes.className = "classes";
+//       classes.innerHTML = store.Dandd.class[i];
+//     }
+//   }
+// }
 //       router.navigate("/pizza");
 //     });
 //   }
@@ -80,14 +93,8 @@ router.hooks({
               feelsLike: kelvinToFahrenheit(response.data.main.feels_like),
               description: response.data.weather[0].main
             };
+            console.log(store.Home.weather);
 
-            // An alternate method would be to store the values independently
-            /*
-            store.Home.weather.city = response.data.name;
-            store.Home.weather.temp = kelvinToFahrenheit(response.data.main.temp);
-            store.Home.weather.feelsLike = kelvinToFahrenheit(response.data.main.feels_like);
-            store.Home.weather.description = response.data.weather[0].main;
-            */
             done();
           })
           .catch(err => {
@@ -96,24 +103,30 @@ router.hooks({
           });
         break;
 
-      // // Add a case for each view that needs data from an API
-      // case "Warhammer":
-      //   // New Axios get request utilizing already made environment variable
-      //   axios
-      //     .get(`${process.env.PIZZA_PLACE_API_URL}/pizzas`)
-      //     .then(response => {
-      //       // We need to store the response to the state, in the next step but in the meantime
-      //       //   let's see what it looks like so that we know what to store from the response.
-      //       console.log("response", response.data);
-      //       store.Pizza.pizzas = response.data;
+      //Add a case for each view that needs data from an API
+      case "Dandd":
+        // New Axios get request utilizing already made environment variable
+        axios
+          // .get(`https://jsonplaceholder.typicode.com/posts?_limit=10`)
+          .get(`https://www.dnd5eapi.co/api/classes/`)
+          .then(response => {
+            // We need to store the response to the state, in the next step but in the meantime
+            //   let's see what it looks like so that we know what to store from the response.
+            // for (let i = 0; i < 12; i++);
+            // store.Dandd.class = {
+            //   index: response.data.index,
+            //   name: response.data.name
+            // };
+            store.Dandd.classes = response.data.results;
+            console.log(store.Dandd.classes);
 
-      //       done();
-      //     })
-      //     .catch(error => {
-      //       console.log("It puked", error);
-      //       done();
-      //     });
-      //   break;
+            done();
+          })
+          .catch(err => {
+            console.log(err);
+            done();
+          });
+        break;
       // case "Products":
       //   axios.get("https://fakestoreapi.com/products").then(response => {
       //     // store.Products.products = response.data.map(product => {
@@ -127,8 +140,8 @@ router.hooks({
       //     done();
       //   });
       //   break;
-      // default:
-      //   done();
+      default:
+        done();
     }
   },
   already: params => {
