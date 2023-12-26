@@ -1,0 +1,243 @@
+html {
+background-image: radial-gradient(rgb(90, 92, 93), white);
+font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+
+.Viewnotfound > h1 {
+  display: flex;
+  font-weight: bolder;
+  font-size: xx-large;
+  justify-content: center;
+  align-content: center;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  border: solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray) ;
+  padding-right: 25px;
+}
+
+.navText{
+display:block;
+margin: 0 auto;
+font-weight: bolder;
+font-size: xx-large;
+}
+
+.a > li {
+  display:inline;
+  border: thin solid black;
+  border-radius: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bolder;
+  color: black;
+
+}
+nav .a > li:hover {
+  background-color: black;
+  color: white;
+}
+
+.homeSelectorBoxes {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  height: 80vh;
+}
+
+.homeSelectorBoxes > div {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border: thick solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray);
+  align-items: center;
+}
+
+#appExplanation{
+}
+
+#armySelector{
+}
+
+#scheduler{
+}
+
+#unused{
+}
+
+.aboutSelectorBoxes {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.aboutSelectorBoxes > div {
+  display: flex;
+  border: thick solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray);
+}
+
+.aboutSelectorBoxes > #appExplanation{
+  width: 80vw;
+  height: 30vh;
+  margin: 30px;
+  padding: 50px;
+}
+
+.aboutSelectorBoxes > #armySelector{
+  width: 80vw;
+  height: 30vh;
+  margin: 30px;
+}
+
+.contactSelectorBoxes {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#contactForm {
+  height: fit-content;
+  width: fit-content;
+}
+
+.contactSelectorBoxes > div {
+  display: flex;
+  border: thick solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray);
+}
+
+  #contactappExplanation {
+  height: fit-content;
+  width: fit-content;
+  margin: 30px;
+  padding: 50px;
+}
+
+
+#fs-frm-inputs {
+  height: 25vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: xx-large;
+}
+
+.gameSelectorBoxes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.gameSelectorBoxes > div {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 25%;
+  height: 40vh;
+  border: thick solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray);
+  align-items: center;
+}
+
+.scheduleSelectorBoxes {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  height: 80vh;
+}
+
+.scheduleSelectorBoxes > div {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border: thick solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray);
+  align-items: center;
+}
+
+.day:hover {
+  background-color: black;
+  color: white;
+}
+
+
+#monday {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#tuesday {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#wednesday {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#thursday {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+#friday {
+  grid-column: 2;
+  grid-row: 5;
+}
+
+#saturday {
+  grid-column: 2;
+  grid-row: 6;
+}
+
+#sunday {
+  grid-column: 2;
+  grid-row: 7;
+}
+
+.schedulerArmySelector {
+  grid-column: 1;
+  grid-row: 1/ span 3;
+}
+
+.scheduler{
+  grid-column: 1;
+  grid-row: 5/ span 3;
+}
+
+.sidebar{
+  grid-column: 3;
+  grid-row: 2/ span 5;
+}
+
+
