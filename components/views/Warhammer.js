@@ -3,7 +3,7 @@ export default () => html`
   <main>
     <div class="WarhammerSelectorBoxes">
       <ul class="Wfaction">
-        Select a Faction for the Army
+        Select a Faction for this Army
         <li>Aeldari</li>
         <li>Chaos</li>
         <li>Tyranids</li>
@@ -15,7 +15,7 @@ export default () => html`
         <li>Space Marines</li>
       </ul>
       <ul class="Wsubfaction">
-        Select a Subfaction for the Army
+        Select a Subfaction for this Army
         <li>Aeldari CraftWorlds</li>
         <li>Aeldari Drukhari</li>
         <li>Aeldari Ynnari</li>
@@ -50,7 +50,11 @@ export default () => html`
         <li>Space Marines White Scars</li>
       </ul>
       <div class="Wapproxpoints">
-        Create a drop box/accordian for approximate points
+        What is the point value for this Army?
+        <li>Combat Patrol (approx 500 pts)</li>
+        <li>Incursion (approx 1000 pts)</li>
+        <li>Strike Force (approx 2000 pts)</li>
+        <li>Onslaught (approx 3000 pts or more)</li>
       </div>
       <div class="unused">
         I want one continuous filled form across all 3 games
