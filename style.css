@@ -1,3 +1,5 @@
+/* ------------------------ General styles ----------------------------------  */
+
 html {
 background-image: radial-gradient(rgb(90, 92, 93), white);
 font-family: 'Merriweather', serif;
@@ -51,6 +53,10 @@ nav .a > li:hover {
   color: white;
 }
 
+/* ------------------------  End General styles ----------------------------------  */
+
+/* ------------------------  Home styles ----------------------------------  */
+
 .homeSelectorBoxes {
   display:grid;
   grid-template-columns: repeat(2, 1fr);
@@ -82,6 +88,10 @@ nav .a > li:hover {
 #unused{
 }
 
+/* ------------------------  End Home styles ----------------------------------  */
+
+/* ------------------------  About styles ----------------------------------  */
+
 .aboutSelectorBoxes {
   display:flex;
   align-items: center;
@@ -108,6 +118,10 @@ nav .a > li:hover {
   height: 30vh;
   margin: 30px;
 }
+
+/* ------------------------  End About styles ----------------------------------  */
+
+/* ------------------------ Contact styles ----------------------------------  */
 
 .contactSelectorBoxes {
   display:flex;
@@ -147,6 +161,10 @@ h2 {
   font-size: xx-large;
 }
 
+/* ------------------------  End Contact styles ----------------------------------  */
+
+/* ------------------------  Game styles ----------------------------------  */
+
 .gameSelectorBoxes {
   display: flex;
   justify-content: space-around;
@@ -164,6 +182,10 @@ h2 {
   background-image: radial-gradient(lightgray, gray);
   align-items: center;
 }
+
+/* ------------------------  End General styles ----------------------------------  */
+
+/* ------------------------  Schedule styles ----------------------------------  */
 
 .scheduleSelectorBoxes {
   display:grid;
@@ -240,4 +262,130 @@ h2 {
   grid-row: 2/ span 5;
 }
 
+/* ------------------------ Dandd styles ----------------------------------  */
 
+.DandDSelectorBoxes {
+  display:grid;
+  text-align: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  height: 80vh;
+}
+
+.Class > li {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+  border: thick solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray);
+  align-items: center;
+}
+
+.Class > li:hover {
+  background-color: black !important;
+  color: white;
+}
+
+.Species > li {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+  border: thick solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray);
+  align-items: center;
+}
+
+.Species > li:hover {
+  background-color: black !important;
+  color: white;
+}
+
+.Dapproxlevel > li {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+  border: thick solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray);
+  align-items: center;
+}
+
+.Dapproxlevel > li:hover {
+  background-color: black !important;
+  color: white;
+}
+/* ------------------------  End Dandd styles ----------------------------------  */
+
+/* ------------------------  Xwing styles ----------------------------------  */
+
+/* ------------------------  End Xwing styles ----------------------------------  */
+
+/* ------------------------  Warhammer styles ----------------------------------  */
+
+.WarhammerSelectorBoxes {
+  display:grid;
+  text-align: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  height: 80vh;
+}
+
+.Wfaction > li {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+  border: thick solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray);
+  align-items: center;
+}
+
+.Wfaction > li:hover {
+  background-color: black !important;
+  color: white;
+}
+
+.Wsubfaction > li {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+  border: thick solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray);
+  align-items: center;
+}
+
+.Wsubfaction > li:hover {
+  background-color: black !important;
+  color: white;
+}
+
+.Wapproxpoints > li {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+  border: thick solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray);
+  align-items: center;
+}
+
+.Wapproxpoints > li:hover {
+  background-color: black !important;
+  color: white;
+
+/* ------------------------  End Warhammer styles ----------------------------------  */
