@@ -326,6 +326,48 @@ h2 {
 
 /* ------------------------  Xwing styles ----------------------------------  */
 
+.XWingSelectorBoxes {
+  display:grid;
+  text-align: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  height: 80vh;
+}
+
+.Xfaction > li {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+  border: thick solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray);
+  align-items: center;
+}
+
+.Xfaction > li:hover {
+  background-color: black !important;
+  color: white;
+}
+
+.Xapproxpoints > li {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+  border: thick solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray);
+  align-items: center;
+}
+
+.Xapproxpoints > li:hover {
+  background-color: black !important;
+  color: white;
+}
 /* ------------------------  End Xwing styles ----------------------------------  */
 
 /* ------------------------  Warhammer styles ----------------------------------  */
