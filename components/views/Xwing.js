@@ -3,7 +3,7 @@ export default () => html`
   <main>
     <div class="XWingSelectorBoxes">
       <div class="faction">Pull factions from api on github</div>
-      <div class="Approxpoints">
+      <div class="XApproxpoints">
         Create a drop box/accordian for approximate points
       </div>
       <div class="unused">

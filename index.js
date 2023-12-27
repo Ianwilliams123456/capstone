@@ -107,8 +107,10 @@ router.hooks({
       case "Dandd":
         // New Axios get request utilizing already made environment variable
         axios
-          // .get(`https://jsonplaceholder.typicode.com/posts?_limit=10`)
+          // .all([
+          // axios.get(`https://www.dnd5eapi.co/api/races/`),
           .get(`https://www.dnd5eapi.co/api/classes/`)
+          // ])
           .then(response => {
             // We need to store the response to the state, in the next step but in the meantime
             //   let's see what it looks like so that we know what to store from the response.
