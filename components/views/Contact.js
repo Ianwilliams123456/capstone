@@ -3,7 +3,7 @@ export default () => html`
   <main>
     <div class="contactSelectorBoxes">
       <div class="contactSelectorBoxes" id="contactappExplanation">
-        Need Wall o' Text
+        Digimeets is a
       </div>
       <div class="contactSelectorBoxes" id="contactForm">
         <h2>Contact us</h2>
@@ -31,7 +31,7 @@ export default () => html`
               placeholder="email@domain.tld"
               required=""
             />
-            <label for="message">Message</label>
+            <label for="message">Games or features to add, etc</label>
             <textarea
               rows="5"
               name="message"

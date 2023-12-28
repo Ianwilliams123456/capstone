@@ -49,13 +49,13 @@ export default () => html`
         <li>Space Marines Ultramarines</li>
         <li>Space Marines White Scars</li>
       </ul>
-      <div class="Wapproxpoints">
+      <ul class="Wapproxpoints">
         What is the point value for this Army?
         <li>Combat Patrol (approx 500 pts)</li>
         <li>Incursion (approx 1000 pts)</li>
         <li>Strike Force (approx 2000 pts)</li>
         <li>Onslaught (approx 3000 pts or more)</li>
-      </div>
+      </ul>
       <div class="unused">
         I want one continuous filled form across all 3 games
       </div>
