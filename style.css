@@ -275,7 +275,7 @@ h2 {
   height: 80vh;
 }
 
-.Class > li {
+#Class > div {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -286,12 +286,12 @@ h2 {
   align-items: center;
 }
 
-.Class > li:hover {
+#Class > div:hover {
   background-color: black !important;
   color: white;
 }
 
-.Species > li {
+#Species > div {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -302,12 +302,12 @@ h2 {
   align-items: center;
 }
 
-.Species > li:hover {
+#Species > div:hover {
   background-color: black !important;
   color: white;
 }
 
-.Dapproxlevel > li {
+#Dapproxlevel > div {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -318,7 +318,7 @@ h2 {
   align-items: center;
 }
 
-.Dapproxlevel > li:hover {
+#Dapproxlevel > div:hover {
   background-color: black !important;
   color: white;
 }
@@ -377,13 +377,14 @@ h2 {
   text-align: center;
   justify-content: center;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(13, 1fr);
+  grid-template-rows: repeat(39, 1fr);
   grid-gap: 20px;
   padding: 20px;
   height: 80vh;
 }
 
-.Wfaction > li {
+#Wfaction > div {
+
   display: flex;
   text-align: center;
   justify-content: center;
@@ -394,12 +395,29 @@ h2 {
   align-items: center;
 }
 
-.Wfaction > li:hover {
+#Wfaction > div:hover {
+  background-color: black !important;
+  color: white;
+  display: block;
+}
+
+#Wsubfaction > div {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+  border: thick solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(lightgray, gray);
+  align-items: center;
+}
+
+#Wsubfaction > div:hover {
   background-color: black !important;
   color: white;
 }
 
-.Wsubfaction > li {
+#Wapproxpoints > div {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -410,23 +428,7 @@ h2 {
   align-items: center;
 }
 
-.Wsubfaction > li:hover {
-  background-color: black !important;
-  color: white;
-}
-
-.Wapproxpoints > li {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  justify-content: space-around;
-  border: thick solid black;
-  border-radius: 25px;
-  background-image: radial-gradient(lightgray, gray);
-  align-items: center;
-}
-
-.Wapproxpoints > li:hover {
+#Wapproxpoints > div:hover {
   background-color: black !important;
   color: white;
 

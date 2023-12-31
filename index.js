@@ -3,6 +3,7 @@ import * as store from "./store";
 import Navigo from "navigo";
 import { capitalize } from "lodash";
 import axios from "axios";
+import { species, level, aldeari, ald } from "./docs/objects";
 
 const router = new Navigo("/");
 
@@ -15,56 +16,67 @@ function render(state = store.Home) {
   `;
 
   router.updatePageLinks();
-  // afterRender(state);
+  afterRender(state);
 }
 
-// function afterRender(state) {
-//   //   // add menu toggle to bars icon in nav bar
-//   //   document.querySelector(".fa-bars").addEventListener("click", () => {
-//   //     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
-//   //   });
+function afterRender(state) {
+  if (state.view === "Dandd") {
+    for (let i = 0; i < state.classes.length; i++) {
+      let classapi = document.createElement("div");
+      classapi.classList.add("classapi");
+      classapi.innerText = `${state.classes[i].name}`;
+      document.getElementById("Class").appendChild(classapi);
+    }
+    for (let i = 0; i < species.length; i++) {
+      let Species = document.createElement("div");
+      Species.classList.add("race");
+      Species.innerText = `${species[i]}`;
+      document.getElementById("Species").appendChild(Species);
+    }
+    for (let i = 0; i < level.length; i++) {
+      let dlevel = document.createElement("div");
+      dlevel.classList.add("dlevel");
+      dlevel.innerText = `${level[i]}`;
+      document.getElementById("Dapproxlevel").appendChild(dlevel);
+    }
+  }
 
-// if (state.view === "Dandd") {
-//     for (let i = 0; i < store.Dandd.class.results.length; i++) {
-//       classfilter = store.Dandd.class.results[i].name;
-//       console.log(classfilter);
-//     }
-//   }
+  if (state.view === "Warhammer") {
+    document.getElementById("ald").addEventListener("click", ald);
+  }
+}
+//   document.getElementById("cha").addEventListener("click", event +> {
+//      event.preventDefault.Default();
+// })
 // }
-//       console.log(store.Dandd.class);
-//     });
-//   }
+//   document.getElementById("tyr").addEventListener("click", event +> {
+//      event.preventDefault.Default();
+// })
 // }
-//     for (var i = 0; i < store.Dandd.class.length; i++) {
-//       var classes = document.createElement("div");
-//       classes.className = "classes";
-//       classes.innerHTML = store.Dandd.class[i];
-//     }
-//   }
+//   document.getElementById("imp").addEventListener("click", event +> {
+//      event.preventDefault.Default();
+// })
 // }
-//       router.navigate("/pizza");
-//     });
-//   }
-
-//   if (state.view === "Order") {
-//     document.querySelector("form").addEventListener("submit", event => {
-//       event.preventDefault();
-
-//       store.Pizza.pizzas.push({
-//         crust: event.target.elements.crust.value,
-//         cheese: event.target.elements.cheese.value,
-//         customer: event.target.elements.customer.value,
-//         sauce: event.target.elements.sauce.value,
-//         toppings: []
-//       });
-
-//       console.log(store.Pizza.pizzas);
-
-//       router.navigate("/Pizza");
-//     });
-//   }
+//   document.getElementById("lov").addEventListener("click", event +> {
+//      event.preventDefault.Default();
+// })
 // }
-
+//   document.getElementById("nec").addEventListener("click", event +> {
+//      event.preventDefault.Default();
+// })
+// }
+//   document.getElementById("ork").addEventListener("click", event +> {
+//      event.preventDefault.Default();
+// })
+// }
+//   document.getElementById("tau").addEventListener("click", event +> {
+//      event.preventDefault.Default();
+// })
+// }
+//   document.getElementById("spm").addEventListener("click", event +> {
+//      event.preventDefault.Default();
+// })
+// }
 router.hooks({
   before: (done, params) => {
     // We need to know what view we are on to know what data to fetch
