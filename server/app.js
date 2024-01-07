@@ -41,7 +41,7 @@ app.use(express.json());
 
 // Request handlers go here
 app.get("/status", (request, response) => {
-  response.send(JSON.stringify({ message: "Service healthy" }));
+  response.status(200).json({ message: "Service healthy" });
 });
 
 app.use("/Testerifneeded", army);
