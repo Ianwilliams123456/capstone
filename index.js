@@ -3,7 +3,7 @@ import * as store from "./store";
 import Navigo from "navigo";
 import { capitalize } from "lodash";
 import axios from "axios";
-import { species, level, aldeari, ald } from "./docs/objects";
+import { dspecies, dlevel, ald, csm, tyr, imp, spm } from "./docs/objects";
 
 const router = new Navigo("/");
 
@@ -27,28 +27,56 @@ function afterRender(state) {
       classapi.innerText = `${state.classes[i].name}`;
       document.getElementById("Class").appendChild(classapi);
     }
-    for (let i = 0; i < species.length; i++) {
+    for (let i = 0; i < dspecies.length; i++) {
       let Species = document.createElement("div");
       Species.classList.add("race");
-      Species.innerText = `${species[i]}`;
+      Species.innerText = `${dspecies[i]}`;
       document.getElementById("Species").appendChild(Species);
     }
-    for (let i = 0; i < level.length; i++) {
+    for (let i = 0; i < dlevel.length; i++) {
       let dlevel = document.createElement("div");
       dlevel.classList.add("dlevel");
-      dlevel.innerText = `${level[i]}`;
+      dlevel.innerText = `${dlevel[i]}`;
       document.getElementById("Dapproxlevel").appendChild(dlevel);
     }
   }
 
   if (state.view === "Warhammer") {
-    document.getElementById("ald").addEventListener("click", ald);
+    ald();
+    csm();
+    tyr();
+    imp();
+    spm();
+  }
+
+  if (state.view === "Testerifneeded") {
+    document.getElementById("testersubmit").addEventListener("click", event => {
+      event.preventDefault();
+
+      const requestData = document.getElementById("tester").value;
+      console.log(requestData);
+
+      axios
+        // Make a POST request to the API to create a new pizza
+        .post(`http://localhost:4040/army`, requestData)
+        .then(response => {
+          //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+          store.Testerifneeded.testarmy.push(response.data);
+          // router.navigate("");
+        })
+        // If there is an error log it to the console
+        .catch(error => {
+          console.log("It puked", error);
+        });
+      document.getElementById("testdisplay").innerText = store.testarmy[0];
+    });
   }
 }
-//   document.getElementById("cha").addEventListener("click", event +> {
-//      event.preventDefault.Default();
-// })
+
+//     );
+//   }
 // }
+
 //   document.getElementById("tyr").addEventListener("click", event +> {
 //      event.preventDefault.Default();
 // })
