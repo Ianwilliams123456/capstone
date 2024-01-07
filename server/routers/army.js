@@ -1,12 +1,12 @@
 import { Router } from "express";
-import warmy from "../models/Charmies.js";
+import army from "../models/Charmies.js";
 
 const router = Router();
 
 // Create army route
 router.post("/", async (request, response) => {
   try {
-    const newArmy = new warmy(request.body);
+    const newArmy = new army(request.body);
 
     const data = await newArmy.save();
 

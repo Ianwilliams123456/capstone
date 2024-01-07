@@ -62,13 +62,15 @@ function afterRender(state) {
         .then(response => {
           //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
           store.Testerifneeded.testarmy.push(response.data);
-          // router.navigate("");
+          console.log(store.Testerifneeded.testarmy[0].value);
+          router.navigate("/Scheduler");
         })
         // If there is an error log it to the console
         .catch(error => {
           console.log("It puked", error);
         });
-      document.getElementById("testdisplay").innerText = store.testarmy[0];
+      document.getElementById("testdisplay").innerText =
+        store.testarmy[0].value;
     });
   }
 }

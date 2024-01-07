@@ -8,6 +8,6 @@ const armySchema = new mongoose.Schema({
   }
 });
 
-const warmy = mongoose.model("warmy", armySchema);
+const army = mongoose.model("army", armySchema);
 
-export default warmy;
+export default army;
