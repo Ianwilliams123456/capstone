@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose, { trusted } from "mongoose";
+import army from "./routers/army.js";
 
 dotenv.config();
 const app = express();
@@ -42,6 +43,8 @@ app.use(express.json());
 app.get("/status", (request, response) => {
   response.send(JSON.stringify({ message: "Service healthy" }));
 });
+
+app.use("/Testerifneeded", army);
 
 app.listen(PORT, () =>
   console.log("Ian Williams Capstone Listening on port 4040")

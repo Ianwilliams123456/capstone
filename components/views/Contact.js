@@ -3,10 +3,11 @@ export default () => html`
   <main>
     <div class="contactSelectorBoxes">
       <div class="contactSelectorBoxes" id="contactappExplanation">
-        Digimeets is a
+        Digimeets is a virtual business, please reach out to us through the
+        contact us box below
       </div>
       <div class="contactSelectorBoxes" id="contactForm">
-        <h2>Contact us</h2>
+        <h2>Contact Us</h2>
         <form
           id="fs-frm"
           name="simple-contact-form"
