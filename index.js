@@ -69,8 +69,8 @@ function afterRender(state) {
         .catch(error => {
           console.log("It puked", error);
         });
-      document.getElementById("testdisplay").innerText =
-        store.testarmy[0].value;
+      // document.getElementById("testdisplay").innerText =
+      //   store.testarmy;
     });
   }
 }
