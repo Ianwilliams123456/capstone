@@ -14,6 +14,7 @@ export default () => html`
         method="POST"
         action=""
       />
+      />
       <input
         type="submit"
         value="submit"
