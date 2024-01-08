@@ -50,7 +50,7 @@ function afterRender(state) {
   }
 
   if (state.view === "Testerifneeded") {
-    document.getElementById("testersubmit").addEventListener("click", event => {
+    document.getElementById("testersubmit").addEventListener("submit", event => {
       event.preventDefault();
 
       const requestData = document.getElementById("tester").value;
