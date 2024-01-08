@@ -44,7 +44,7 @@ app.get("/status", (request, response) => {
   response.status(200).json({ message: "Service healthy" });
 });
 
-app.use("/Testerifneeded", army);
+app.use("/army", army);
 
 app.listen(PORT, () =>
   console.log("Ian Williams Capstone Listening on port 4040")
