@@ -34,10 +34,10 @@ function afterRender(state) {
       document.getElementById("Species").appendChild(Species);
     }
     for (let i = 0; i < dlevel.length; i++) {
-      let dlevel = document.createElement("div");
-      dlevel.classList.add("dlevel");
-      dlevel.innerText = `${dlevel[i]}`;
-      document.getElementById("Dapproxlevel").appendChild(dlevel);
+      let Level = document.createElement("div");
+      Level.classList.add("level");
+      Level.innerText = `${dlevel[i]}`;
+      document.getElementById("Dapproxlevel").appendChild(Level);
     }
   }
 
@@ -50,28 +50,30 @@ function afterRender(state) {
   }
 
   if (state.view === "Testerifneeded") {
-    document.getElementById("testersubmit").addEventListener("submit", event => {
-      event.preventDefault();
+    document
+      .getElementById("testersubmit")
+      .addEventListener("submit", event => {
+        event.preventDefault();
 
-      const requestData = document.getElementById("tester").value;
-      console.log(requestData);
+        const requestData = document.getElementById("tester").value;
+        console.log(requestData);
 
-      axios
-        // Make a POST request to the API to create a new pizza
-        .post(`http://localhost:4040/army`, requestData)
-        .then(response => {
-          //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-          store.Testerifneeded.testarmy.push(response.data);
-          console.log(store.Testerifneeded.testarmy[0].value);
-          router.navigate("/Scheduler");
-        })
-        // If there is an error log it to the console
-        .catch(error => {
-          console.log("It puked", error);
-        });
-      // document.getElementById("testdisplay").innerText =
-      //   store.testarmy;
-    });
+        axios
+          // Make a POST request to the API to create a new pizza
+          .post(`http://localhost:4040/army`, requestData)
+          .then(response => {
+            //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+            store.Testerifneeded.testarmy.push(response.data);
+            console.log(store.Testerifneeded.testarmy[0].value);
+            router.navigate("/Scheduler");
+          })
+          // If there is an error log it to the console
+          .catch(error => {
+            console.log("It puked", error);
+          });
+        // document.getElementById("testdisplay").innerText =
+        //   store.testarmy;
+      });
   }
 }
 
