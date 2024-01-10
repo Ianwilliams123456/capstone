@@ -4,6 +4,15 @@ export default state => html`
     <div class="DandDSelectorBoxes">
       <div id="Species">
         Select a Species For This Character
+        ${state.races
+          .map(
+            species => html`
+              <div class="races">
+                ${species}
+              </div>
+            `
+          )
+          .join("")}
       </div>
       <div id="Class">
         Select a ClassFor This Character

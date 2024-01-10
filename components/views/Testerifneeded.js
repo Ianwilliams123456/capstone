@@ -11,9 +11,6 @@ export default () => html`
         minlength="2"
         maxlength="12"
         size="10"
-        method="POST"
-        action=""
-      />
       />
       <input
         type="submit"
