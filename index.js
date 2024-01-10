@@ -27,18 +27,24 @@ function afterRender(state) {
       classapi.innerText = `${state.classes[i].name}`;
       document.getElementById("Class").appendChild(classapi);
     }
-    for (let i = 0; i < dspecies.length; i++) {
-      let Species = document.createElement("div");
-      Species.classList.add("race");
-      Species.innerText = `${dspecies[i]}`;
-      document.getElementById("Species").appendChild(Species);
-    }
+    // for (let i = 0; i < dspecies.length; i++) {
+    //   let Species = document.createElement("div");
+    //   Species.classList.add("race");
+    //   Species.innerText = `${dspecies[i]}`;
+    //   document.getElementById("Species").appendChild(Species);
+    // }
     for (let i = 0; i < dlevel.length; i++) {
       let Level = document.createElement("div");
       Level.classList.add("level");
       Level.innerText = `${dlevel[i]}`;
       document.getElementById("Dapproxlevel").appendChild(Level);
     }
+    Array.from(document.getElementsByClassName("races")).forEach(race => {
+      race.addEventListener("click", event => {
+        event.preventDefault();
+        console.log(event.target.innerText);
+      });
+    });
   }
 
   if (state.view === "Warhammer") {
@@ -50,30 +56,28 @@ function afterRender(state) {
   }
 
   if (state.view === "Testerifneeded") {
-    document
-      .getElementById("testersubmit")
-      .addEventListener("submit", event => {
-        event.preventDefault();
+    document.getElementById("testerform").addEventListener("submit", event => {
+      event.preventDefault();
 
-        const requestData = document.getElementById("tester").value;
-        console.log(requestData);
+      const requestData = { name: event.target.elements.tester.value };
+      console.log(requestData);
 
-        axios
-          // Make a POST request to the API to create a new pizza
-          .post(`http://localhost:4040/army`, requestData)
-          .then(response => {
-            //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-            store.Testerifneeded.testarmy.push(response.data);
-            console.log(store.Testerifneeded.testarmy[0].value);
-            router.navigate("/Scheduler");
-          })
-          // If there is an error log it to the console
-          .catch(error => {
-            console.log("It puked", error);
-          });
-        // document.getElementById("testdisplay").innerText =
-        //   store.testarmy;
-      });
+      axios
+        // Make a POST request to the API to create a new pizza
+        .post(`http://localhost:4040/army`, requestData)
+        .then(response => {
+          //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+          store.Testerifneeded.testarmy.push(response.data);
+          console.log(store.Testerifneeded.testarmy[0]);
+          router.navigate("/Scheduler");
+        })
+        // If there is an error log it to the console
+        .catch(error => {
+          console.log("It puked", error);
+        });
+      // document.getElementById("testdisplay").innerText =
+      //   store.testarmy;
+    });
   }
 }
 

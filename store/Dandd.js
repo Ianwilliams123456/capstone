@@ -2,5 +2,15 @@ export default {
   header: "Choose A Race, Class and Level",
   view: "Dandd",
   classes: [],
-  race: []
+  races: [
+    "Dragonborn",
+    "Dwarf",
+    "Elf",
+    "Gnome",
+    "Half-Elf",
+    "Half-Orc",
+    "Halfling",
+    "Human",
+    "Tiefling"
+  ]
 };
