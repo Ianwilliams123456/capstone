@@ -1,5 +1,5 @@
 export default {
-  header: "Test Dynamic Divs Here",
+  header: "Here are the collected armies",
   view: "Testerifneeded",
   testarmy: [],
   warmy: [],

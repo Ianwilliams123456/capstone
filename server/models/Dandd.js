@@ -3,18 +3,15 @@ import mongoose from "mongoose";
 const charSchema = new mongoose.Schema({
   species: {
     type: String,
-    required: true,
-    validate: /^[A-Za-z0-9 ]*$/
+    required: true
   },
   class: {
     type: String,
-    required: true,
-    validate: /^[A-Za-z0-9 ]*$/
+    required: true
   },
   pointlevel: {
     type: String,
-    required: true,
-    validate: /^[A-Za-z0-9 ]*$/
+    required: true
   }
 });
 

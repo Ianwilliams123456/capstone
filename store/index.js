@@ -8,4 +8,4 @@ export { default as Xwing } from "./Xwing";
 export { default as Scheduler } from "./Scheduler";
 export { default as Links } from "./Links";
 export { default as Viewnotfound } from "./Viewnotfound";
-export { default as Testerifneeded } from "./Display";
+export { default as Testerifneeded } from "./Testerifneeded";

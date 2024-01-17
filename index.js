@@ -56,8 +56,8 @@ function afterRender(state) {
         .post(`http://localhost:4040/Dandd`, requestData)
         .then(response => {
           //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-          store.Display.char.push(response.data);
-          console.log(store.Display.char[0]);
+          store.Testerifneeded.char.push(response.data);
+          console.log(store.Testerifneeded.char[0]);
           router.navigate("/Warhammer");
         })
         // If there is an error log it to the console
@@ -95,8 +95,8 @@ function afterRender(state) {
         .post(`http://localhost:4040/Warhammer`, requestData)
         .then(response => {
           //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-          store.Display.warmy.push(response.data);
-          console.log(store.Display.warmy[0]);
+          store.Testerifneeded.warmy.push(response.data);
+          console.log(store.Testerifneeded.warmy[0]);
           router.navigate("/XWing");
         })
         // If there is an error log it to the console
@@ -135,9 +135,9 @@ function afterRender(state) {
         .post(`http://localhost:4040/XWing`, requestData)
         .then(response => {
           //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-          store.Display.xarmy.push(response.data);
-          console.log(store.Display.xarmy[0]);
-          router.navigate("/Display");
+          store.Testerifneeded.xarmy.push(response.data);
+          console.log(store.Testerifneeded.xarmy[0]);
+          router.navigate("/Testerifneeded");
         })
         // If there is an error log it to the console
         .catch(error => {
