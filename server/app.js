@@ -2,6 +2,9 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose, { trusted } from "mongoose";
 import army from "./routers/army.js";
+import char from "./routers/Dandd.js";
+import warmy from "./routers/Warhammer.js";
+import xarmy from "./routers/XWing.js";
 
 dotenv.config();
 const app = express();
@@ -45,6 +48,9 @@ app.get("/status", (request, response) => {
 });
 
 app.use("/army", army);
+app.use("/Dand", char);
+app.use("/Warhammer", warmy);
+app.use("/XWing", xarmy);
 
 app.listen(PORT, () =>
   console.log("Ian Williams Capstone Listening on port 4040")
