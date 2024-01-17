@@ -1,41 +1,3 @@
-let dspecies = [
-  "Dragonborn",
-  "Dwarf",
-  "Elf",
-  "Gnome",
-  "Half-Elf",
-  "Half-Orc",
-  "Halfling",
-  "Human",
-  "Tiefling"
-];
-
-let dlevel = [
-  "Local Heroes (1 through 4)",
-  "Heroes of the Realm (5 through 10)",
-  "Masters of the Realm (11 through 16)",
-  "Masters of the World (17 through 20)"
-];
-
-let xlevel = [
-  "Local Heroes (1 through 4)",
-  "Heroes of the Realm (5 through 10)",
-  "Masters of the Realm (11 through 16)",
-  "Masters of the World (17 through 20)"
-];
-
-let xfactions = [
-  "Dragonborn",
-  "Dwarf",
-  "Elf",
-  "Gnome",
-  "Half-Elf",
-  "Half-Orc",
-  "Halfling",
-  "Human",
-  "Tiefling"
-];
-
 function ald() {
   for (let i = 0; i < aldeari.length; i++) {
     let ald = document.createElement("div");
@@ -122,4 +84,4 @@ let imperism = [
   "Ultramarines",
   "White Scars"
 ];
-export { dspecies, dlevel, ald, csm, tyr, imp, spm };
+export { ald, csm, tyr, imp, spm };
