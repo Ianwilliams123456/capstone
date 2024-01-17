@@ -26,9 +26,10 @@ export default state => html`
           )
           .join("")}
       </div>
-      <div class="unused">
-        I want one continuous filled form across all 3 games
-      </div>
+      <form id="xform">
+        <input type="submit" value="submit" name="xsubmit" id="xsubmit" />
+        <div id="xdisplay"></div>
+      </form>
     </div>
   </main>
 `;

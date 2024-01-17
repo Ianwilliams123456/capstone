@@ -74,10 +74,9 @@ export default state => html`
           )
           .join("")}
       </div>
-      <form id="warmydisplay">
-        <label for="tester">Name (4 to 8 characters):</label>
-        <input type="submit" value="submit" name="Submit Name" id="submit" />
-        <div id="testdisplay"></div>
+      <form id="wform">
+        <input type="submit" value="submit" name="wsubmit" id="wsubmit" />
+        <div id="wdisplay"></div>
       </form>
     </div>
   </main>

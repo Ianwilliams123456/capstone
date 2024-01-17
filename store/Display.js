@@ -1,5 +1,8 @@
 export default {
   header: "Test Dynamic Divs Here",
   view: "Testerifneeded",
-  testarmy: []
+  testarmy: [],
+  warmy: [],
+  xarmy: [],
+  char: []
 };
