@@ -3,7 +3,7 @@ import * as store from "./store";
 import Navigo from "navigo";
 import { capitalize } from "lodash";
 import axios from "axios";
-import { dspecies, dlevel, ald, csm, tyr, imp, spm } from "./docs/objects";
+import { ald, csm, tyr, imp, spm } from "./docs/objects";
 
 const router = new Navigo("/");
 
@@ -21,38 +21,68 @@ function render(state = store.Home) {
 
 function afterRender(state) {
   if (state.view === "Dandd") {
-    for (let i = 0; i < state.classes.length; i++) {
-      let classapi = document.createElement("div");
-      classapi.classList.add("classapi");
-      classapi.innerText = `${state.classes[i].name}`;
-      document.getElementById("Class").appendChild(classapi);
-    }
-    // for (let i = 0; i < dspecies.length; i++) {
-    //   let Species = document.createElement("div");
-    //   Species.classList.add("race");
-    //   Species.innerText = `${dspecies[i]}`;
-    //   document.getElementById("Species").appendChild(Species);
-    // }
-    for (let i = 0; i < dlevel.length; i++) {
-      let Level = document.createElement("div");
-      Level.classList.add("level");
-      Level.innerText = `${dlevel[i]}`;
-      document.getElementById("Dapproxlevel").appendChild(Level);
-    }
     Array.from(document.getElementsByClassName("races")).forEach(race => {
       race.addEventListener("click", event => {
         event.preventDefault();
-        console.log(event.target.innerText);
+        state.character.push(event.target.innerText);
+      });
+    });
+
+    Array.from(document.getElementsByClassName("classes")).forEach(dclass => {
+      dclass.addEventListener("click", event => {
+        event.preventDefault();
+        state.character.push(event.target.innerText);
+      });
+    });
+
+    Array.from(document.getElementsByClassName("dlevels")).forEach(dlevel => {
+      dlevel.addEventListener("click", event => {
+        event.preventDefault();
+        state.character.push(event.target.innerText);
+        console.log(state.character);
       });
     });
   }
 
   if (state.view === "Warhammer") {
-    ald();
-    csm();
-    tyr();
-    imp();
-    spm();
+    Array.from(document.getElementsByClassName("wfactions")).forEach(
+      wfaction => {
+        wfaction.addEventListener("click", event => {
+          event.preventDefault();
+          state.warmy.push(event.target.innerText);
+        });
+      }
+    );
+
+    Array.from(document.getElementsByClassName("wlevels")).forEach(wlevel => {
+      wlevel.addEventListener("click", event => {
+        event.preventDefault();
+        state.warmy.push(event.target.innerText);
+        document.getElementById(
+          "warmydisplay"
+        ).innerText = ` your army faction is ${state.warmy[0]} and`;
+      });
+    });
+  }
+
+  // document.getElementById("wclear")
+  if (state.view === "Xwing") {
+    Array.from(document.getElementsByClassName("xfactions")).forEach(
+      xfaction => {
+        xfaction.addEventListener("click", event => {
+          event.preventDefault();
+          state.xarmy.push(event.target.innerText);
+        });
+      }
+    );
+
+    Array.from(document.getElementsByClassName("xlevels")).forEach(xlevel => {
+      xlevel.addEventListener("mouseup", event => {
+        event.preventDefault();
+        state.xarmy.push(event.target.innerText);
+        console.log(state.xarmy);
+      });
+    });
   }
 
   if (state.view === "Testerifneeded") {

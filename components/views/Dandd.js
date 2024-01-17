@@ -16,9 +16,27 @@ export default state => html`
       </div>
       <div id="Class">
         Select a ClassFor This Character
+        ${state.classes
+          .map(
+            dclass => html`
+              <div class="classes">
+                ${dclass.name}
+              </div>
+            `
+          )
+          .join("")}
       </div>
       <div id="Dapproxlevel">
         Select a Level Range For This Character
+        ${state.dlevels
+          .map(
+            levelgroup => html`
+              <div class="dlevels">
+                ${levelgroup}
+              </div>
+            `
+          )
+          .join("")}
       </div>
       <div class="formcollect">
         I want one continuous filled form across all 3 games

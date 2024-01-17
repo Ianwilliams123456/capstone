@@ -1,32 +1,84 @@
 import html from "html-literal";
-export default () => html`
+export default state => html`
   <main>
     <div class="WarhammerSelectorBoxes">
       <div id="Wfaction">
         Select a Faction for this Army
-        <div id="aldselect">Aeldari</div>
-        <div id="chaselect">Chaos</div>
-        <div id="tyrselect">Tyranids</div>
-        <div id="impselect">Imperium</div>
-        <div id="lovselect">Leagues of Votann</div>
-        <div id="necselect">Necron</div>
-        <div id="orkselect">Orks</div>
-        <div id="tauselect">Tau</div>
-        <div id="spmselect">Space Marines</div>
+        ${state.wfactions
+          .map(
+            wfaction => html`
+              <div class="wfactions">
+                ${wfaction}
+              </div>
+            `
+          )
+          .join("")}
       </div>
-      <div id="Wsubfaction">
+      <!-- <div id="Wsubfaction">
         Select a Subfaction for this Army
-      </div>
+        ${state.aldearis
+        .map(
+          aldeari => html`
+            <div class="aldearis" style="visibility: hidden;">
+              ${aldeari}
+            </div>
+          `
+        )
+        .join("")}
+        ${state.chaossms
+        .map(
+          chaossm => html`
+            <div class="chaossms" style="display: none;">
+              ${chaossm}
+            </div>
+          `
+        )
+        .join("")}
+        ${state.imperimans
+        .map(
+          imperiman => html`
+            <div class="imperimans" style="display: none;">
+              ${imperiman}
+            </div>
+          `
+        )
+        .join("")}
+        ${state.imperisms
+        .map(
+          imperism => html`
+            <div class="imperisms" style="display: none;">
+              ${imperism}
+            </div>
+          `
+        )
+        .join("")}
+        ${state.tyracults
+        .map(
+          tyracult => html`
+            <div class="tyracults" style="display: none;">
+              ${tyracult}
+            </div>
+          `
+        )
+        .join("")}
+      </div> -->
       <div id="Wapproxpoints">
         What is the point value for this Army?
-        <div>Combat Patrol (approx 500 pts)</div>
-        <div>Incursion (approx 1000 pts)</div>
-        <div>Strike Force (approx 2000 pts)</div>
-        <div>Onslaught (approx 3000 pts or more)</div>
+        ${state.wlevels
+          .map(
+            wlevelgroup => html`
+              <div class="wlevels">
+                ${wlevelgroup}
+              </div>
+            `
+          )
+          .join("")}
       </div>
-      <div class="unused">
-        I want one continuous filled form across all 3 games
-      </div>
+      <form id="warmydisplay">
+        <label for="tester">Name (4 to 8 characters):</label>
+        <input type="submit" value="submit" name="Submit Name" id="submit" />
+        <div id="testdisplay"></div>
+      </form>
     </div>
   </main>
 `;

@@ -337,7 +337,7 @@ h2 {
   height: 80vh;
 }
 
-.Xfaction > li {
+.Xfaction > div {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -348,12 +348,12 @@ h2 {
   align-items: center;
 }
 
-.Xfaction > li:hover {
+.Xfaction > div:hover {
   background-color: black !important;
   color: white;
 }
 
-.Xapproxpoints > li {
+.Xlevels > div {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -364,8 +364,8 @@ h2 {
   align-items: center;
 }
 
-.Xapproxpoints > li:hover {
-  background-color: black !important;
+.Xlevels > div:hover {
+  background-color: black;
   color: white;
 }
 /* ------------------------  End Xwing styles ----------------------------------  */
@@ -431,5 +431,7 @@ h2 {
 #Wapproxpoints > div:hover {
   background-color: black !important;
   color: white;
+
+
 
 /* ------------------------  End Warhammer styles ----------------------------------  */

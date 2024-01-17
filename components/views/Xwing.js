@@ -1,21 +1,30 @@
 import html from "html-literal";
-export default () => html`
+export default state => html`
   <main>
     <div class="XWingSelectorBoxes">
       <div class="Xfaction">
         Pull factions from api on github
-        <div>Rebel Alliance</div>
-        <div>Galactic Empire</div>
-        <div>Scum and Villainy</div>
-        <div>Resistance</div>
-        <div>First Order</div>
-        <div>Galactic Republic</div>
-        <div>Separatist Alliance</div>
+        ${state.xfactions
+          .map(
+            xfaction => html`
+              <div class="xfactions">
+                ${xfaction}
+              </div>
+            `
+          )
+          .join("")}
       </div>
-      <div class="XApproxpoints">
+      <div class="Xlevels">
         For what point level of play is this Army best used?
-        <div>Standard Play (200 pts)</div>
-        <div>Epic Play (300 - 500 pts)</div>
+        ${state.xlevels
+          .map(
+            xlevel => html`
+              <div class="xlevels">
+                ${xlevel}
+              </div>
+            `
+          )
+          .join("")}
       </div>
       <div class="unused">
         I want one continuous filled form across all 3 games
