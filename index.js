@@ -42,8 +42,30 @@ function afterRender(state) {
         console.log(state.character);
       });
     });
-  }
 
+    document.getElementById("dform").addEventListener("submit", event => {
+      event.preventDefault();
+      const requestData = {
+        class: state.character[0],
+        species: state.character[1],
+        pointlevel: state.character[2]
+      };
+
+      axios
+        // Make a POST request to the API to create a new pizza
+        .post(`http://localhost:4040/Dandd`, requestData)
+        .then(response => {
+          //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+          store.Display.char.push(response.data);
+          console.log(store.Display.char[0]);
+          router.navigate("/Warhammer");
+        })
+        // If there is an error log it to the console
+        .catch(error => {
+          console.log("It puked", error);
+        });
+    });
+  }
   if (state.view === "Warhammer") {
     Array.from(document.getElementsByClassName("wfactions")).forEach(
       wfaction => {
@@ -58,14 +80,31 @@ function afterRender(state) {
       wlevel.addEventListener("click", event => {
         event.preventDefault();
         state.warmy.push(event.target.innerText);
-        document.getElementById(
-          "warmydisplay"
-        ).innerText = ` your army faction is ${state.warmy[0]} and`;
       });
     });
-  }
+    document.getElementById("wform").addEventListener("submit", event => {
+      event.preventDefault();
 
-  // document.getElementById("wclear")
+      const requestData = {
+        faction: state.warmy[0],
+        pointlevel: state.warmy[1]
+      };
+
+      axios
+        // Make a POST request to the API to create a new pizza
+        .post(`http://localhost:4040/Warhammer`, requestData)
+        .then(response => {
+          //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+          store.Display.warmy.push(response.data);
+          console.log(store.Display.warmy[0]);
+          router.navigate("/XWing");
+        })
+        // If there is an error log it to the console
+        .catch(error => {
+          console.log("It puked", error);
+        });
+    });
+  }
   if (state.view === "Xwing") {
     Array.from(document.getElementsByClassName("xfactions")).forEach(
       xfaction => {
@@ -83,66 +122,30 @@ function afterRender(state) {
         console.log(state.xarmy);
       });
     });
-  }
-
-  if (state.view === "Testerifneeded") {
-    document.getElementById("testerform").addEventListener("submit", event => {
+    document.getElementById("xform").addEventListener("submit", event => {
       event.preventDefault();
 
-      const requestData = { name: event.target.elements.tester.value };
+      const requestData = {
+        faction: state.xarmy[0],
+        pointlevel: state.xarmy[1]
+      };
       console.log(requestData);
-
       axios
         // Make a POST request to the API to create a new pizza
-        .post(`http://localhost:4040/army`, requestData)
+        .post(`http://localhost:4040/XWing`, requestData)
         .then(response => {
           //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-          store.Testerifneeded.testarmy.push(response.data);
-          console.log(store.Testerifneeded.testarmy[0]);
-          router.navigate("/Scheduler");
+          store.Display.xarmy.push(response.data);
+          console.log(store.Display.xarmy[0]);
+          router.navigate("/Display");
         })
         // If there is an error log it to the console
         .catch(error => {
           console.log("It puked", error);
         });
-      // document.getElementById("testdisplay").innerText =
-      //   store.testarmy;
     });
   }
 }
-
-//     );
-//   }
-// }
-
-//   document.getElementById("tyr").addEventListener("click", event +> {
-//      event.preventDefault.Default();
-// })
-// }
-//   document.getElementById("imp").addEventListener("click", event +> {
-//      event.preventDefault.Default();
-// })
-// }
-//   document.getElementById("lov").addEventListener("click", event +> {
-//      event.preventDefault.Default();
-// })
-// }
-//   document.getElementById("nec").addEventListener("click", event +> {
-//      event.preventDefault.Default();
-// })
-// }
-//   document.getElementById("ork").addEventListener("click", event +> {
-//      event.preventDefault.Default();
-// })
-// }
-//   document.getElementById("tau").addEventListener("click", event +> {
-//      event.preventDefault.Default();
-// })
-// }
-//   document.getElementById("spm").addEventListener("click", event +> {
-//      event.preventDefault.Default();
-// })
-// }
 router.hooks({
   before: (done, params) => {
     // We need to know what view we are on to know what data to fetch
@@ -190,16 +193,8 @@ router.hooks({
           .get(`https://www.dnd5eapi.co/api/classes/`)
           // ])
           .then(response => {
-            // We need to store the response to the state, in the next step but in the meantime
-            //   let's see what it looks like so that we know what to store from the response.
-            // for (let i = 0; i < 12; i++);
-            // store.Dandd.class = {
-            //   index: response.data.index,
-            //   name: response.data.name
-            // };
             store.Dandd.classes = response.data.results;
             console.log(store.Dandd.classes);
-
             done();
           })
           .catch(err => {
@@ -207,19 +202,6 @@ router.hooks({
             done();
           });
         break;
-      // case "Products":
-      //   axios.get("https://fakestoreapi.com/products").then(response => {
-      //     // store.Products.products = response.data.map(product => {
-      //     //   return {
-      //     //     title: product.title + " matsinet",
-      //     //     image: product.image
-      //     //   };
-      //     // });
-      //     store.Products.products = response.data;
-
-      //     done();
-      //   });
-      //   break;
       default:
         done();
     }
