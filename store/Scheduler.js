@@ -1,4 +1,4 @@
 export default {
-  header: "My Scheduler Page",
+  header: "The Schedule Page: Future Implementation",
   view: "Scheduler"
 };

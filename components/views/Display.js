@@ -19,6 +19,7 @@ export default state => html`
         id="testersubmit"
       /> -->
       <div id="testdisplay">
+        your armies are as follows:
         ${state.xarmy
           .map(
             xarmy => html`

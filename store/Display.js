@@ -1,6 +1,6 @@
 export default {
   header: "Here are the collected armies",
-  view: "Testerifneeded",
+  view: "Display",
   testarmy: [],
   warmy: [],
   xarmy: [],
