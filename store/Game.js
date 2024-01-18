@@ -1,4 +1,4 @@
 export default {
-  header: "My Game Page",
+  header: "Super Sweet Game Images that will be links one day",
   view: "Game"
 };

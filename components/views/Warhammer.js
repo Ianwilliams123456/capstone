@@ -76,7 +76,6 @@ export default state => html`
       </div>
       <form id="wform">
         <input type="submit" value="submit" name="wsubmit" id="wsubmit" />
-        <div id="wdisplay"></div>
       </form>
     </div>
   </main>
