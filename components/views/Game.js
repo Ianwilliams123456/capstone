@@ -1,10 +1,19 @@
 import html from "html-literal";
+import dragon from "../../docs/images/danddpic.jpg";
+import warhammer from "../../docs/images/warhammerpic.jpg";
+import xwing from "../../docs/images/xwingpic.jpg";
 export default () => html`
   <main>
     <div class="gameSelectorBoxes">
-      <div class="XWing">Link to XWing Page</div>
-      <div class="Warhammer40k">Link to Warhammer 40k page</div>
-      <div class="DandD">Link to Dungeons and Dragons page</div>
+      <div id="XWingpic">
+        <img src=${xwing} alt="Dungeons and Dragons" />
+      </div>
+      <div id="Warhammer40kpic">
+        <img src=${warhammer} alt="Dungeons and Dragons" />
+      </div>
+      <div id="Danddpic">
+        <img src=${dragon} alt="Dungeons and Dragons" />
+      </div>
     </div>
   </main>
 `;

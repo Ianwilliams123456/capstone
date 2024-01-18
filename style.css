@@ -59,8 +59,8 @@ nav .a > li:hover {
 
 .homeSelectorBoxes {
   display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-gap: 20px;
   padding: 20px;
   height: 80vh;
@@ -69,6 +69,7 @@ nav .a > li:hover {
 .homeSelectorBoxes > div {
   display: flex;
   text-align: center;
+  font-size: xx-large;
   justify-content: center;
   border: thick solid black;
   border-radius: 25px;
@@ -77,15 +78,6 @@ nav .a > li:hover {
 }
 
 #appExplanation{
-}
-
-#armySelector{
-}
-
-#scheduler{
-}
-
-#unused{
 }
 
 /* ------------------------  End Home styles ----------------------------------  */
@@ -97,26 +89,23 @@ nav .a > li:hover {
   align-items: center;
   flex-direction: column;
   text-align: center;
-}
-
-.aboutSelectorBoxes > div {
-  display: flex;
   border: thick solid black;
   border-radius: 25px;
   background-image: radial-gradient(lightgray, gray);
 }
 
-.aboutSelectorBoxes > #appExplanation{
+/* .aboutSelectorBoxes > div {
+
+  display: flex;
+
+} */
+
+#aboutappExplanation{
   width: 80vw;
   height: 30vh;
   margin: 30px;
   padding: 50px;
-}
-
-.aboutSelectorBoxes > #armySelector{
-  width: 80vw;
-  height: 30vh;
-  margin: 30px;
+  font-size: large;
 }
 
 /* ------------------------  End About styles ----------------------------------  */
@@ -181,6 +170,24 @@ h2 {
   border-radius: 25px;
   background-image: radial-gradient(lightgray, gray);
   align-items: center;
+}
+
+#Danddpic > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+#Warhammer40kpic > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+#XWingpic > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
 }
 
 /* ------------------------  End General styles ----------------------------------  */
@@ -431,7 +438,5 @@ h2 {
 #Wapproxpoints > div:hover {
   background-color: black !important;
   color: white;
-
-
 
 /* ------------------------  End Warhammer styles ----------------------------------  */

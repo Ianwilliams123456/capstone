@@ -1,18 +1,11 @@
 import html from "html-literal";
+import title from "../../docs/images/titlepagepic.jpg";
 export default state => html`
   <main>
     <div class="homeSelectorBoxes">
-      <div class="homeSelectorBoxes" id="appExplanation">
-      In the city of ${state.weather.city}
+      <div id="appExplanation">
+        <img src=${title} alt="Dungeons and Dragons" />
       </div>
-      <div class="homeSelectorBoxes" id="armySelector">
-      The weather is ${state.weather.description}
-      </div>
-      <div class="homeSelectorBoxes" id="scheduler">
-      The temperature is ${state.weather.temp}F
-      </div>
-      <div class="homeSelectorBoxes" id="unused">
-      it feels like ${state.weather.feelsLike}F
-      </div>
+    </div>
   </main>
 `;
