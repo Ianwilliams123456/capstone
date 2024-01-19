@@ -17,50 +17,50 @@ export default state => html`
       <!-- <div id="Wsubfaction">
         Select a Subfaction for this Army
         ${state.aldearis
-        .map(
-          aldeari => html`
-            <div class="aldearis" style="visibility: hidden;">
-              ${aldeari}
-            </div>
-          `
-        )
-        .join("")}
+          .map(
+            aldeari => html`
+              <div class="aldearis" style="visibility: hidden;">
+                ${aldeari}
+              </div>
+            `
+          )
+          .join("")}
         ${state.chaossms
-        .map(
-          chaossm => html`
-            <div class="chaossms" style="display: none;">
-              ${chaossm}
-            </div>
-          `
-        )
-        .join("")}
+          .map(
+            chaossm => html`
+              <div class="chaossms" style="display: none;">
+                ${chaossm}
+              </div>
+            `
+          )
+          .join("")}
         ${state.imperimans
-        .map(
-          imperiman => html`
-            <div class="imperimans" style="display: none;">
-              ${imperiman}
-            </div>
-          `
-        )
-        .join("")}
+          .map(
+            imperiman => html`
+              <div class="imperimans" style="display: none;">
+                ${imperiman}
+              </div>
+            `
+          )
+          .join("")}
         ${state.imperisms
-        .map(
-          imperism => html`
-            <div class="imperisms" style="display: none;">
-              ${imperism}
-            </div>
-          `
-        )
-        .join("")}
+          .map(
+            imperism => html`
+              <div class="imperisms" style="display: none;">
+                ${imperism}
+              </div>
+            `
+          )
+          .join("")}
         ${state.tyracults
-        .map(
-          tyracult => html`
-            <div class="tyracults" style="display: none;">
-              ${tyracult}
-            </div>
-          `
-        )
-        .join("")}
+          .map(
+            tyracult => html`
+              <div class="tyracults" style="display: none;">
+                ${tyracult}
+              </div>
+            `
+          )
+          .join("")}
       </div> -->
       <div id="Wapproxpoints">
         What is the point value for this Army?
@@ -75,6 +75,7 @@ export default state => html`
           .join("")}
       </div>
       <form id="wform">
+      <label for="army submit">Click here to submit!<label><br>
         <input type="submit" value="submit" name="wsubmit" id="wsubmit" />
       </form>
     </div>

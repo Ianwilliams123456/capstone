@@ -39,6 +39,7 @@ export default state => html`
           .join("")}
       </div>
       <form id="dform">
+        <label for="army submit">Click here to submit!<label><br>
         <input type="submit" value="submit" name="dsubmit" id="dsubmit" />
         <div id="ddisplay"></div>
       </form>
