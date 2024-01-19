@@ -19,18 +19,18 @@ export default state => html`
         id="testersubmit"
       /> -->
       <div id="testdisplay">
-      Your Dungeons and Dragons Character Information is as follows:<br><br><br>
+      <b>Your Dungeons and Dragons Character Information is as follows:</b><br><br>
       ${state.char.map(char => {
-        return `Species is ${char.species} & Class is ${char.class} & Point Level is ${char.pointlevel}`;
-      })}<br><br><br>
-      Your armies are as follows:<br><br><br>
-        Warhammer:
+        return `Your character is a member of the ${char.class} species, has a class of ${char.species} and is ready for ${char.pointlevel} level games`;
+      })}<br><br>
+      <b>Your army's information is as follows:</b><br><br>
+      Warhammer:
       ${state.warmy.map(warmy => {
-        return `Faction is ${warmy.faction} & Point Level is ${warmy.pointlevel}`;
+        return `Your army's faction is ${warmy.faction} and is ready to engage in ${warmy.pointlevel} level battles`;
       })}<br><br>
       XWing:
        ${state.xarmy.map(xarmy => {
-         return `Faction is ${xarmy.faction} & Point Level is ${xarmy.pointlevel}`;
+         return `Your army's faction is ${xarmy.faction} and is read to engage in conflicts at the ${xarmy.pointlevel} level`;
        })}
       </div>
     </form>

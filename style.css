@@ -94,12 +94,6 @@ nav .a > li:hover {
   background-image: radial-gradient(lightgray, gray);
 }
 
-/* .aboutSelectorBoxes > div {
-
-  display: flex;
-
-} */
-
 #aboutappExplanation{
   width: 80vw;
   height: 30vh;
@@ -218,7 +212,11 @@ h2 {
   color: white;
 }
 
-
+#scheduler {
+  font-size: larger;
+  grid-column: 1;
+  grid-row: 1/span 3;
+}
 #monday {
   grid-column: 2;
   grid-row: 1;

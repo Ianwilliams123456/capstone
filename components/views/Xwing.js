@@ -27,6 +27,7 @@ export default state => html`
           .join("")}
       </div>
       <form id="xform">
+      <label for="army submit">Click here to submit!<label><br>
         <input type="submit" value="submit" name="xsubmit" id="xsubmit" />
         <div id="xdisplay"></div>
       </form>
