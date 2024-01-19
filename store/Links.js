@@ -7,5 +7,5 @@ export default [
   { title: "Warhammer", text: "Warhammer" },
   { title: "Xwing", text: "Xwing" },
   { title: "Scheduler", text: "Scheduler" },
-  { title: "Testerifneeded", text: "Testerifneeded" }
+  { title: "Display", text: "Display" }
 ];

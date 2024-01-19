@@ -56,8 +56,8 @@ function afterRender(state) {
         .post(`http://localhost:4040/Dandd`, requestData)
         .then(response => {
           //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-          store.Testerifneeded.char.push(response.data);
-          console.log(store.Testerifneeded.char[0]);
+          store.Display.char.push(response.data);
+          console.log(store.Display.char[0]);
           router.navigate("/Warhammer");
         })
         // If there is an error log it to the console
@@ -95,8 +95,8 @@ function afterRender(state) {
         .post(`http://localhost:4040/Warhammer`, requestData)
         .then(response => {
           //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-          store.Testerifneeded.warmy.push(response.data);
-          console.log(store.Testerifneeded.warmy[0]);
+          store.Display.warmy.push(response.data);
+          console.log(store.Display.warmy[0]);
           router.navigate("/XWing");
         })
         // If there is an error log it to the console
@@ -135,9 +135,9 @@ function afterRender(state) {
         .post(`http://localhost:4040/XWing`, requestData)
         .then(response => {
           //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-          store.Testerifneeded.xarmy.push(response.data);
-          console.log(store.Testerifneeded.xarmy[0]);
-          router.navigate("/Testerifneeded");
+          store.Display.xarmy.push(response.data);
+          console.log(store.Display.xarmy[0]);
+          router.navigate("/Display");
         })
         // If there is an error log it to the console
         .catch(error => {
@@ -174,7 +174,6 @@ router.hooks({
               feelsLike: kelvinToFahrenheit(response.data.main.feels_like),
               description: response.data.weather[0].main
             };
-            console.log(store.Home.weather);
 
             done();
           })
@@ -188,13 +187,9 @@ router.hooks({
       case "Dandd":
         // New Axios get request utilizing already made environment variable
         axios
-          // .all([
-          // axios.get(`https://www.dnd5eapi.co/api/races/`),
           .get(`https://www.dnd5eapi.co/api/classes/`)
-          // ])
           .then(response => {
             store.Dandd.classes = response.data.results;
-            console.log(store.Dandd.classes);
             done();
           })
           .catch(err => {
